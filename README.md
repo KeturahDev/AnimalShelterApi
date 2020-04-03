@@ -1,50 +1,35 @@
-# CatBoard Interface+Api
+# AnimalShelter Api
 ### By **Keturah Howard**  April 3rd 2020
 
-Repo holding ASP.NET core MVC application to display views that interact with the CatBoardApi application and the Api.
+ASP.NET core API application to create database of Animals at an Alternate Universe AnimalShelter- Where the animals you adopt are actually now your master.
 
 ## Specifications 
 
 ### user stories:
 
-* As a user, I want to be able to GET all boards.
-* As a user, I want to be able to GET all posts related to boards.
-* As a user, I want to be able to POST boards.
-* As a user, I want to be able to POST posts to boards.
-* As a user, I want to be able to see a list of all groups.
-* As a user, I want to input date parameters and retrieve only messages posted during that timeframe.
-* As a user, I want to be able to PUT and DELETE messages, but only if I wrote them. (Start by requiring a user_name param to match the user_name of the author on the message. You can always try authentication later.)
+* As a user, I want to be able to GET all Animals.
+* As a user, I want to be able to GET details of Animals (type, personality, gender, age, social status).
+* As a user, I want to be able to POST Animals.
+* As a user, I want to be able to PUT Animals.
+* As a user, I want to be able to Delete Animals.
+* As a user, I want to input type parameters and retrieve only Animals under that type.
+* As a user, I want to input personality parameters and retrieve only Animals under that personality.
+* As a user, I want to input gender parameters and retrieve only Animals under that gender.
+* As a user, I want to input age parameters and retrieve only Animals under that age.
+* As a user, I want to input social status parameters and retrieve only Animals under that social status.
 
 ### API Endpoints
 
-BOARDS
+ANIMALS
 ```
-GET /api/boards
-POST /api/boards
-GET /api/boards/{boardId}
-PUT /api/boards/{boardId}
-DELETE /api/boards/{boardId}
-```
-
-POSTS
-```
-GET /api/boards/{boardId}/Posts
-POST /api/boards/{boardId}/Posts
-GET /api​/boards​/{boardId}​/Posts​/{id}
-PUT /api​/boards​/{boardId}​/Posts​/{id}
-DELETE /api/boards/{boardId}/Posts/{id}
-PATCH /api​/boards​/{boardId}​/Posts​/{id}​/upvote
-PATCH /api/boards/{boardId}/Posts/{id}/downvote
+GET /api/animals
+POST /api/animals
+GET /api/animals/{animalId}
+PUT /api/animal/{animalId}
+DELETE /api/animal/{animalId}
 ```
 
-COMMENTS (*- Interface: work in progress -*)
-```
-GET /api/boards/{boardId}/posts/{postId}/Comments
-POST /api/boards/{boardId}/posts/{postId}/Comments
-GET /api/boards/{boardId}/posts/{postId}/Comments/{id}
-PUT /api/boards/{boardId}/posts/{postId}/Comments/{id}
-DELETE /api/boards/{boardId}/posts/{postId}/Comments/{id}
-```
+
 
 
 ## Getting Started
@@ -91,14 +76,13 @@ Download the .zip file and extract all files into directory of your choice OR cl
 Currently there's no known bugs.
 
 ## Contact Info 
-Currently there's no known bugs, however, if there are any issues running this website I would love feedback! Please email us at 
+Currently there's no known bugs, however, if there are any issues running this website I would love feedback! Please email me at 
 * keturah.dev@gmail.com.
-* jamisoncozart@gmail.com
-* 
+
 
 
 ## License
 
 Licensed under the MIT license.
 
-&copy; 2020 Keturah Howard, Jamison Cozart, Dusty McCord, Zakkrey Short.
+&copy; 2020 Keturah Howard.
