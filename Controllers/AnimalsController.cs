@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using AnimalShelter.Models;
 
 namespace AnimalShelter.Controllers
@@ -42,8 +43,11 @@ namespace AnimalShelter.Controllers
 
     // PUT api/Animals/5
     [HttpPut("{id}")]
-    public void Put(int id, [FromBody] string value)
+    public void Put(int id, [FromBody] Animal animal)
     {
+      animal.AnimalId = id; //wanting to understand better
+      _db.Entry(animal).State = EntityState.Modified;
+      _db.SaveChanges();
     }
 
     // DELETE api/Animals/5
