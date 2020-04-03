@@ -26,9 +26,10 @@ namespace AnimalShelter.Controllers
 
     // GET api/Animals/5
     [HttpGet("{id}")]
-    public ActionResult<string> Get(int id)
+    public ActionResult<Animal> Get(int id)
     {
-      return "value";
+      Animal thisAnimal = _db.Animals.FirstOrDefault(animal => animal.AnimalId == id);
+      return thisAnimal;
     }
 
     // POST api/Animals
