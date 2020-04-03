@@ -34,8 +34,10 @@ namespace AnimalShelter.Controllers
 
     // POST api/Animals
     [HttpPost]
-    public void Post([FromBody] string value)
+    public void Post([FromBody] Animal animal)
     {
+      _db.Animals.Add(animal);
+      _db.SaveChanges();
     }
 
     // PUT api/Animals/5
